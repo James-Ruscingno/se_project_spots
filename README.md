@@ -16,4 +16,4 @@ Spots is a social media website used for posting pictures for the world to see. 
 
 This webpage is deployed to GitHub Pages
 
-Link: 
+{Link:} (https://james-ruscingno.github.io/se_project_spots/)
