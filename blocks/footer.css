@@ -1,7 +1,7 @@
 .footer {
   display: flex;
   justify-content: center;
-  margin: 60px 0;
+  padding: 60px 0;
 }
 
 .footer__title {

@@ -23,6 +23,7 @@
   white-space: nowrap;
   overflow: hidden;
   color: #212121;
+  max-width: 268px;
 }
 
 .card__like-button {
