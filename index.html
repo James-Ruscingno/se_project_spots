@@ -107,6 +107,22 @@
       <footer class="footer">
         <p class="footer__title">2025 &copy;Spots</p>
       </footer>
+      <div class="modal modal_opened">
+        <div class="modal__container">
+          <button type="submit" class="modal__close-button"></button>
+          <h2 class="modal__title">Edit profile</h2>
+          <form name="edit-profile" class="modal__form">
+            <label for="name" class="modal__label"> Name
+              <input id="name" type="text" class="modal__input" placeholder="Type your name">
+            </label>
+            <label for="description" class="modal__label"> Description
+              <input id="description" type="text" class="modal__input" placeholder="Describe yourself">
+            </label>
+            <button type="submit" class="modal__submit-button">Save
+          </button>
+          </form>
+        </div>
+      </div>
     </div>
     <script defer src="./scripts/index.js"></script>
   </body>
