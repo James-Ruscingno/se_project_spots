@@ -1,5 +1,7 @@
 .modal {
   visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,6 +16,7 @@
 
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
 }
 
 .modal__container {
@@ -134,6 +137,11 @@
 
 .modal__input {
   font-size: 16px;
+}
+
+.modal__form {
+  width: 100%;
+  max-width: none;
 }
 
 }
