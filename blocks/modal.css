@@ -12,7 +12,10 @@
   justify-content: center;
   padding: 0 20px;
   display: flex;
+}
 
+.modal_type_preview {
+  padding: 0 16px;
 }
 
 .modal_is-opened {
@@ -40,6 +43,18 @@
   background-color: transparent;
   border: none;
   opacity: 40%;
+}
+
+.modal__close-btn_type_preview {
+  top: 0;
+  right: -52.5px;
+  background-image: url(../images/delete-preview.svg);
+  background-color: transparent;
+}
+
+.modal__close-btn_type_preview:hover {
+  opacity: 0.4;
+  cursor: pointer;
 }
 
 .modal__close-btn:hover {
@@ -95,7 +110,7 @@
   max-width: 156px;
   padding: 18px 0;
   background-color: #212121;
-  color: #FCF5E5;
+  color: #fcf5e5;
   border-radius: 8px;
   border: none;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -109,42 +124,79 @@
   cursor: pointer;
 }
 
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
+.modal__image-container {
+  position: relative;
+}
+
+.modal__caption {
+  color: white;
+  background-color: #212121;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  width: fit-content;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
 @media screen and (max-width: 627px) {
   .modal {
     padding: 0 10px;
   }
 
-.modal__container {
-  padding: 12px;
-}
+  .modal__container {
+    padding: 12px;
+  }
 
-.modal__title {
-  font-size: 20px;
-  margin-bottom: 24px;
-  margin: 10px 0 34px;
-}
+  .modal__title {
+    font-size: 20px;
+    margin-bottom: 24px;
+    margin: 10px 0 34px;
+  }
 
-.modal__close-btn {
-  top: 12px;
-  right: 12px;
-}
+  .modal__close-btn {
+    top: 12px;
+    right: 12px;
+  }
 
-.modal__label {
-  margin-bottom: 24px;
-}
+  .modal__close-btn_type_preview {
+    top: -48px;
+    right: 0;
+  }
 
-.modal__submit-btn {
-  width: 100%;
-  max-width: none;
-}
+  .modal__label {
+    margin-bottom: 24px;
+  }
 
-.modal__input {
-  font-size: 16px;
-}
+  .modal__submit-btn {
+    width: 100%;
+    max-width: none;
+  }
 
-.modal__form {
-  width: 100%;
-  max-width: none;
-}
+  .modal__input {
+    font-size: 16px;
+  }
 
+  .modal__form {
+    width: 100%;
+    max-width: none;
+  }
+
+  .modal__image {
+    max-width: unset;
+  }
+
+  .modal__caption {
+    font-size: 16px;
+  }
 }
