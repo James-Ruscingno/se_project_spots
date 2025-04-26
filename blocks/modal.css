@@ -206,4 +206,9 @@
   .modal {
     padding: 206px 16px;
   }
+
+  .modal__close-btn.modal__close-btn_type_preview {
+    top: -42px;
+    right: -4px;
+  }
 }
