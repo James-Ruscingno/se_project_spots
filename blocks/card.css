@@ -22,7 +22,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background-image: url(/images/delete.svg);
+  background-image: url(../images/delete.svg);
   border: none;
   background-size: contain;
   background-repeat: no-repeat;
@@ -30,7 +30,7 @@
 }
 
 .card__delete-button:hover {
-  background-image: url(/images/delete-hover.svg);
+  background-image: url(../images/delete-hover.svg);
   cursor: pointer;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .card__like-button_active {
-  background-image: url(/images/like.svg);
+  background-image: url(../images/like.svg);
   opacity: 1;
 }
 
