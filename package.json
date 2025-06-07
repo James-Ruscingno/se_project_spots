@@ -1,0 +1,38 @@
+{
+  "name": "se_project_spots",
+  "version": "0.1.0",
+  "description": "Spots is a social media website used for posting pictures for the world to see. It was created using HTML and CSS based on a design brief from figma.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-Ruscingno/se_project_spots.git"
+  },
+  "author": "\"James Ruscingno\"",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.18.9",
+    "@babel/preset-env": "7.18.9",
+    "autoprefixer": "10.4.7",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "cssnano": "5.1.12",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss-loader": "^7.0.1",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "core-js": "3.23.5"
+  },
+  "bugs": {
+    "url": "https://github.com/James-Ruscingno/se_project_spots/issues"
+  },
+  "homepage": "https://github.com/James-Ruscingno/se_project_spots#readme"
+}
