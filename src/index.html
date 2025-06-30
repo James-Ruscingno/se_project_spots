@@ -6,30 +6,37 @@
     <meta name="author" content="James Ruscingno" />
     <meta name="description" content="Social media page for posting pictures" />
     <meta name="keywords" content="social media, photography, networking" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.svg" alt="Spots logo" class="header__logo" />
+        <img id="logo-image" alt="Spots logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
+          <div class="profile__avatar-container">
           <img
-            src="./images/avatar.jpg"
+            id="avatar-image"
             alt="Bessie Coleman avatar"
             class="profile__avatar"
           />
+          <button class="profile__avatar-btn">
+            <img class="profile__pencil-icon"
+            id="pencil-icon"
+            alt="Pencil icon"
+            />
+          </button>
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
-              <img src="./images/edit.svg" alt="pencil icon" />Edit Profile
+              <img id="edit-icon" alt="pencil icon" />Edit Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img src="./images/plus.svg" alt="plus icon" />New Post
+            <img id="plus-icon" alt="plus icon" />New Post
           </button>
         </section>
         <section class="cards page__section">
@@ -128,6 +135,39 @@
           <p class="modal__caption">Golden Gate Bridge</p>
         </div>
       </div>
+
+      <div class="modal" id="edit-avatar-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn"></button>
+          <h2 class="modal__title">Edit profile avatar</h2>
+          <form class="modal__form" id="edit-avatar-form">
+            <label for="profile-avatar-input" class="modal__label">
+              Profile Picture
+              <input
+                type="url"
+                id="profile-avatar-input"
+                class="modal__input"
+                name="avatar"
+                placeholder="Paste the link to an image"
+                required
+              />
+              <span id="profile-avatar-input-error" class="modal__error"></span>
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+          </div>
+    </div>
+
+    <div class="modal" id="delete-modal">
+        <div class="modal__container delete-modal__container">
+          <button type="button" class="modal__close-btn delete-modal__close-btn"></button>
+          <h2 class="modal__title delete-modal__title">Are you sure you want to delete this image?</h2>
+          <form class="delete-modal__form" id="delete-form">
+            <button type="submit" class="modal__submit-btn delete_btn delete-modal__btn">Delete</button>
+            <button type="button" class="modal__submit-btn delete-modal__btn delete-modal__cancel-btn">Cancel</button>
+          </form>
+          </div>
+        </div>
     </div>
   </body>
 </html>
