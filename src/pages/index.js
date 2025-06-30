@@ -115,13 +115,15 @@ function handleLike(evt, cardId) {
   const likeButton = evt.target;
   const isLiked = likeButton.classList.contains("card__like-button_active");
 
-  api.handleLike(cardId, isLiked)
-    .then(() => {
-      likeButton.classList.toggle("card__like-button_active");
-    })
-    .catch((err) => {
-      console.error("Failed to update like:", err);
-    });
+  api
+      .handleLike(cardId, isLiked)
+      .then((updatedCard) => {
+        if (updatedCard.isLiked) {
+          likeButton.classList.add("card__like-button_active");
+        } else {
+          likeButton.classList.remove("card__like-button_active");
+        }
+      });
 }
 
   function getCardElement(data, currentUserId) {
@@ -131,10 +133,10 @@ function handleLike(evt, cardId) {
     const cardDeleteBtnEl = cardElement.querySelector(".card__delete-button");
     const cardLikeBtnEl = cardElement.querySelector(".card__like-button");
 
-   const isLikedByCurrentUser = Array.isArray(data.likes) && data.likes.some((user) => user._id === currentUserId);
-  if (isLikedByCurrentUser) {
+
+  if (data.isLiked) {
     cardLikeBtnEl.classList.add("card__like-button_active");
-  }
+}
 
 
     cardImageEl.src = data.link;
